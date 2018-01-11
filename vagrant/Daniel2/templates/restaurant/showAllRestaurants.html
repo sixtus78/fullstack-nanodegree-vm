@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block page_title %}All Restaurants{% endblock %}
+{% block container_class %}all-restaurants{% endblock %}
+
+{% block body %}
+{{helper.heading_simple("List of restaurants")}}
+<section class="content">
+    {% if restaurants | length > 0 %}
+        {% include('includes/cards/_include_cards_all_restaurants.html') %}
+    {% else %}
+        <div class="alert alert-primary" role="alert">No restaurants found!</div>
+    {% endif %}
+</section>
+{% endblock body %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}Edit restaurant{% endblock %}
+{% block container_class %}edit-restaurant{% endblock %}
+
+{% block body %}
+{{helper.heading("Edit " + restaurant.name, url_for('showAllRestaurants'), "back to all restaurants")}}
+<section class="content">
+    {% include('includes/forms/_include_form_edit_restaurant.html') %}
+</section>
+{% endblock body %}

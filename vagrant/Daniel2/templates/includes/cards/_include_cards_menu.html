@@ -1,0 +1,19 @@
+<div class="card-deck card-deck--menu">
+
+        {% for i in items %}        
+            <div class="card mb-5">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">{{i.name}}</h5>
+                    <span class="badge badge-pill badge-dark mb-0">{{i.price}}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{i.description}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                    <a href="{{url_for('editMenuItem',restaurant_id=restaurant.id,menu_id=i.id)}}" class="btn btn-primary">Edit</a>
+                    <a href="{{url_for('deleteMenuItem',restaurant_id=restaurant.id,menu_id=i.id)}}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+                
+</div>

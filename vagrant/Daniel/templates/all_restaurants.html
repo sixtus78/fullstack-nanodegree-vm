@@ -1,0 +1,24 @@
+{% include '_header.html' %}
+
+<section class="section section--list-all-restaurants">
+    <div class="container">
+        <h1 class="title">List of all restaurants</h1>
+        <div class="columns is-multiline">
+        {% for r in restaurants %}
+            <div class="column is-one-quarter">
+                <div class="card">
+                    <header class="card-header">
+                    <p class="card-header-title">{{r.name}}</p>
+                    <span class="card-header-icon"><span class="tag is-info">ID {{r.id}}</span></span>
+                    </header>
+                    <footer class="card-footer">
+                            <a href="/restaurants/{{r.id}}/" class="card-footer-item">See menu</a>
+                    </footer>      
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include '_footer.html' %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}404, Sorry!{% endblock %}
+{% block container_class %}page-404{% endblock %}
+
+{% block body %}
+{{helper.heading("404&hellip; oh no!","/","back")}}
+<section class="content">
+    <p class="lead text-center">This should not have happened. Really really sorry.</p>
+</section>
+{% endblock body %}

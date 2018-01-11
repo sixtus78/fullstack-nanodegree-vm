@@ -1,0 +1,30 @@
+{% include '_header.html' %}
+
+<section class="section section--edit-menu-item">
+    <div class="container">
+            
+        <h1 class="title">Delete menu item — {{item.name}}</h1>
+
+        <div class="content">
+                <form class="form" method="post">
+
+                        <div class="notification is-warning">
+                            <p>Are you sure you want to delete {{item.name}}?</p>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input class="button is-danger" type="submit" value="DELETE">
+                            </div>
+                            <div class="control">
+                                <a href="{{url_for('restaurantMenu', restaurant_id = item.restaurant_id)}}" class="button is-text">Cancel</a>
+                            </div>
+                        </div>
+
+                </form>
+        </div>
+        
+    </div>
+</section>
+
+{% include '_footer.html' %}

@@ -1,0 +1,12 @@
+{% macro heading(text="Heading",link="/",link_text="back") -%}
+    <section class="intro d-flex justify-content-between align-items-center">
+        <h1>{{text|safe}}</h1>
+        <a href="{{link}}" class="btn btn-sm btn-outline-secondary">{{link_text}}</a>
+    </section>
+{%- endmacro %}
+
+{% macro heading_simple(text="Heading") -%}
+    <section class="intro">
+        <h1>{{text|safe}}</h1>
+    </section>
+{%- endmacro %}

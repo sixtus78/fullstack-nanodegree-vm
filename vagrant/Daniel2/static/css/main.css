@@ -1,0 +1,39 @@
+html {
+    position: relative;
+    min-height: 100%;
+    background: #FFF url('../img/bg.jpeg') no-repeat center center scroll;
+    background-size: cover;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+    background-color: transparent;
+}
+
+main {
+    background-color: #FFF;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.intro {
+    padding: 1rem 1.5rem 3rem;
+}
+
+.card-deck--restaurants > .card,
+.card-deck--menu > .card {
+    min-width: 300px;
+}
+
+.navbar--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #FFF;
+}
+
+form {
+    margin-bottom: 3rem;
+}

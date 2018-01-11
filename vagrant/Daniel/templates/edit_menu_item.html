@@ -1,0 +1,47 @@
+{% include '_header.html' %}
+
+<section class="section section--edit-menu-item">
+    <div class="container">
+            
+        <h1 class="title">Edit menu item — {{item.name}}</h1>
+
+        <div class="content">
+                <form class="form" action="{{url_for('editMenuItem', restaurant_id = item.restaurant_id, menu_id = item.id)}}" method="post">
+
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input" type="text" value="{{item.name}}" name="name">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Description</label>
+                            <div class="control">
+                                <input class="input" type="text" value="{{item.description}}" name="description">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Price</label>
+                            <div class="control">
+                                <input class="input" type="text" value="{{item.price}}" name="price">
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input class="button is-link" type="submit">
+                            </div>
+                            <div class="control">
+                                <a href="{{url_for('restaurantMenu', restaurant_id = item.restaurant_id)}}" class="button is-text">Cancel</a>
+                            </div>
+                        </div>
+
+                </form>
+        </div>
+        
+    </div>
+</section>
+
+{% include '_footer.html' %}

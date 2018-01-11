@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}{{restaurant.name}} — Menu{% endblock %}
+{% block container_class %}show-menu{% endblock %}
+
+{% block body %}
+{{helper.heading(restaurant.name + " — Menu", url_for('showAllRestaurants'), "back to all restaurants")}}
+<section class="content">
+        {% if items | length > 0 %}
+            {% include('includes/cards/_include_cards_menu.html') %}
+        {% else %}
+            <div class="alert alert-primary" role="alert">{{restaurant.name}} has no menu items yet!</div>
+        {% endif %}
+        <div class="card mb-5">
+            <div class="card-body d-flex justify-content-around align-items-center">
+                <h5 class="card-title mb-0">Add a new menu item</h5>                
+            </div>
+            <div class="card-footer d-flex justify-content-around">
+                <a href="{{url_for('createMenuItem',restaurant_id=restaurant.id)}}" class="btn btn-success">Add</a>
+            </div>
+        </div>
+</section>
+{% endblock body %}

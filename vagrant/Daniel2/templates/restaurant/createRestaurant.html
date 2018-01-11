@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}Create restaurant{% endblock %}
+{% block container_class %}create-restaurant{% endblock %}
+
+{% block body %}
+{{helper.heading("Create a new restaurant", url_for('showAllRestaurants'), "back to all restaurants")}}
+<section class="content">
+    {% include('includes/forms/_include_form_create_restaurant.html') %}
+</section>
+{% endblock body %}

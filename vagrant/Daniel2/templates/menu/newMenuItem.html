@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}Create menu item{% endblock %}
+{% block container_class %}create-menu-item{% endblock %}
+
+{% block body %}
+{{helper.heading("Create a new menu item for " + restaurant.name, url_for('showMenu',restaurant_id=restaurant.id), "back to menu")}}
+<section class="content">
+    {% include('includes/forms/_include_form_create_menu_item.html') %}
+</section>
+{% endblock body %}

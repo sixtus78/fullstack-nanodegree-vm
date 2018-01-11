@@ -1,0 +1,29 @@
+<div class="card-deck card-deck--restaurants">
+
+        {% for r in restaurants %}        
+            <div class="card mb-5">
+                <div class="card-header">
+                    <h5 class="card-title">{{r.name}}</h5>
+                    <h6 class="card-subtitle mb-0 text-muted">Number {{r.id}}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                    <a href="{{url_for('editRestaurant',restaurant_id=r.id)}}" class="btn btn-primary">Edit</a>
+                    <a href="{{url_for('deleteRestaurant',restaurant_id=r.id)}}" class="btn btn-danger">Delete</a>
+                    <a href="{{url_for('showMenu',restaurant_id=r.id)}}" class="btn btn-secondary">Show menu</a>
+                </div>
+            </div>
+        {% endfor %} 
+
+        <div class="card mb-5">
+            <div class="card-body d-flex justify-content-around align-items-center">
+                <h5 class="card-title mb-0">Add a new restaurant</h5>                
+            </div>
+            <div class="card-footer d-flex justify-content-around">
+                <a href="{{url_for('createRestaurant')}}" class="btn btn-success">Add</a>
+            </div>
+        </div>
+        
+</div>

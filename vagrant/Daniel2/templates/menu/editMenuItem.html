@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}Edit menu item{% endblock %}
+{% block container_class %}edit-menu-item{% endblock %}
+
+{% block body %}
+{{helper.heading("Edit menu item " + item.name, url_for('showMenu',restaurant_id=restaurant.id), "back to menu")}}
+<section class="content">
+    {% include('includes/forms/_include_form_edit_menu_item.html') %}
+</section>
+{% endblock body %}

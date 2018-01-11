@@ -1,0 +1,19 @@
+<form method='post'>
+
+	<div class="form-row justify-content-md-center">
+		<div class="col-lg-8 col-xl-6">
+			<div class="alert alert-danger" role="alert">
+				Are you sure you want to delete the restaurant <strong>{{restaurant.name}}</strong>?<br>
+				This action cannot be undone.
+			</div>
+		</div>
+	</div>
+
+	<div class="form-row justify-content-md-center">
+		<div class="form-group col-lg-8 col-xl-6 d-flex justify-content-between align-items-center">
+			<a href="{{url_for('showAllRestaurants')}}" class="btn btn-outline-secondary">Cancel</a>
+			<button type="submit" class="btn btn-danger">Yes, delete</button>
+		</div>
+	</div>
+
+</form>

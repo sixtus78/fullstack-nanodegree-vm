@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block page_title %}Delete restaurant{% endblock %}
+{% block container_class %}delete-restaurant{% endblock %}
+
+{% block body %}
+{{helper.heading("Delete " + restaurant.name, url_for('showAllRestaurants'), "back to all restaurants")}}
+<section class="content">
+    {% include('includes/forms/_include_form_delete_restaurant.html') %}
+</section>
+{% endblock body %}

@@ -1,0 +1,36 @@
+<form method='post'>
+
+	<div class="form-row justify-content-md-center">
+		<div class="form-group col-lg-5 col-xl-4">
+			<label for="inputMenuItemName">Name</label>
+			<input type="text" class="form-control" id="inputMenuItemName" name="inputMenuItemName" value="{{item.name}}">
+		</div>
+		<div class="form-group col-lg-3 col-xl-2">
+			<label for="inputMenuItemPrice">Price</label>
+			<input type="text" class="form-control" id="inputMenuItemPrice" name="inputMenuItemPrice" value="{{item.price}}">
+		</div>
+	</div>
+
+	<div class="form-row justify-content-md-center">
+		<div class="form-group col-lg-8 col-xl-6">
+			<label for="inputMenuItemDescription">Description</label>
+			<input type="text" class="form-control" id="inputMenuItemDescription" name="inputMenuItemDescription" value="{{item.description}}">
+		</div>
+	</div>
+
+	<div class="form-row justify-content-md-center">
+		<div class="form-group col-lg-8 col-xl-6">
+			<label for="inputMenuItemCourse">Course</label>
+			<input type="text" class="form-control" id="inputMenuItemCourse" name="inputMenuItemCourse" value="{{item.course}}">
+		</div>
+	</div>
+
+	<div class="form-row justify-content-md-center">
+		<div class="form-group col-lg-8 col-xl-6 d-flex justify-content-between">
+			<a href="{{url_for('showMenu',restaurant_id=restaurant.id)}}" class="btn btn-outline-secondary">Cancel</a>
+			<button type="submit" class="btn btn-primary">Save changes</button>
+		</div>
+	</div>
+	
+
+</form>
